@@ -2,6 +2,11 @@
 /*
 reast
 ***********************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 1rem;
 }
@@ -100,9 +105,9 @@ html, body {
 }
 
 .fullPage {
-  background: url("../images/section-bg.png") no-repeat center/cover;
+  background: url("../images/section-bg.webp") no-repeat center/cover;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-attachment: scroll;
   overflow: hidden;
@@ -110,7 +115,7 @@ html, body {
 
 @media (max-width: 1024px) {
   .fullPage {
-    background: url("../images/section-bg-mob.png") no-repeat center/cover;
+    background: url("../images/section-bg-mob.webp") no-repeat center/cover;
   }
 }
 
@@ -233,10 +238,13 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -251,8 +259,11 @@ html, body {
 }
 
 .download-box .btn {
-  margin: 16px;
   background: url("../images/button.png") no-repeat center/cover;
+}
+
+.download-box .btn + .btn {
+  margin-left: 2rem;
 }
 
 @media (max-width: 568px) {
@@ -276,13 +287,27 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.download-box .app-box .qrcode {
+  width: 12rem;
+  height: 12rem;
+}
+
+@media (max-width: 568px) {
+  .download-box .app-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .icon-ios {
