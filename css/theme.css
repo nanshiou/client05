@@ -115,7 +115,7 @@ html, body {
 
 @media (max-width: 1024px) {
   .fullPage {
-    background: url("../images/section-bg-mob.webp") no-repeat center/cover;
+    background: url("../images/section-bg-mob.png") no-repeat center/cover;
   }
 }
 
@@ -259,6 +259,7 @@ html, body {
 }
 
 .download-box .btn {
+  margin: 8px;
   background: url("../images/button.png") no-repeat center/cover;
 }
 
